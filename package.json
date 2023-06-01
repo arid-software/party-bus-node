@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=16.*"
   },
-  "name": "client",
+  "name": "@party-bus/client",
   "description": "PartyBus node client.",
   "homepage": "https://github.com/arid-software/party-bus-node#readme",
   "license": "ISC",

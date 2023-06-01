@@ -5,7 +5,7 @@ export default function PublicClient(configuration) {
   const apiUrl = configuration.apiUrl || 'https://partybus-api.aridsoftware.com/api/v1';
   const { secret } = configuration;
 
-  if (!secret || secret === '') throw 'Secret is required.'
+  if (!secret || secret === '') throw Error('Secret is required.');
 
   function now() {
     return configuration.timestamp || Date.now();
