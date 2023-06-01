@@ -21,7 +21,7 @@ import PartyBus from `@party-bus/client';
 const client = PartyBus({ secret: 'connection secret' });
 const connectionId = 'e7ff4ade-bd8d-4636-99ef-aa9b98adc7a1';
 
-const response = await client.connections.events.create(
+const { data, success } = await client.connections.events.create(
   connectionId,
   {
     topic: 'user.created,
@@ -31,6 +31,4 @@ const response = await client.connections.events.create(
     },
   },
 );
-
-const { data, success } = await response.json();
 ```

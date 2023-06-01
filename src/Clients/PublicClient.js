@@ -1,5 +1,7 @@
 import { createHmac } from 'node:crypto';
 
+const fakeResponse = { success: true };
+
 export default function PublicClient(configuration) {
   const enabled = configuration.enabled || true;
   const apiUrl = configuration.apiUrl || 'https://partybus-api.aridsoftware.com/api/v1';
@@ -43,7 +45,7 @@ export default function PublicClient(configuration) {
         headers: buildHeaders(body),
         method: 'POST',
       },
-    );
+    ).then((response) => response.json());
   }
 
   return {
