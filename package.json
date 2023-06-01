@@ -19,7 +19,7 @@
     "test": "npx mocha --recursive"
   },
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {
     "dotenv": "^16.1.3",
     "eslint": "^8.41.0",
